@@ -1,38 +1,207 @@
-.App {
-  text-align: center;
-}
+/* App.css */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#root{
+  background-image: url('/public/body.jpg');
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.en-tete {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+}
+.logo {
+  display: inline-flex;
+}
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 4px;
+}
+.logo p {
+  font-size: 30px;
+  padding-top: 10px;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
+  padding-right: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.menu li {
+  margin: 0 6px;
+  transition: background-color 0.3s ease;
+}
+
+.menu li.active {
+  background-color: #2e010f; 
+  padding: 6px;
+  border-radius: 10px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  /* .header-content {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+  } */
+
+  .navbar {
+    margin-top: 10px; /*Espace entre le logo et le menu sur mobile */
   }
 }
+.flex-container {
+  display: flex;
+  flex-direction: column-reverse; 
+}
+
+.text-container {
+  padding: 20px;
+  /* Styles pour le côté du texte (en bas sur mobile) */
+}
+.features {
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+.features img {
+  height: 17rem;
+  width: 20rem;
+  border-radius: 20px;
+}
+.features-titre h2 p {
+  font-size: 12px;
+}
+
+.comparer{
+  margin-top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background-color: #fff;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0,0, 0.2);
+}
+.comparer p {
+  font-size: 25px;
+}
+.comparer img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+.comparer h2 {
+  margin: auto 5px;
+  font-size: 18px;
+}
+
+.image{
+  text-align: center;
+  background-color: #b8053eda;
+
+}
+.image p {
+  color: #fff;
+  font-size: 20px;
+}
+.image button {
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.title-form {
+  padding: 10px;
+  color: #fff;
+}
+.pied-de-page {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.flex-footer {
+  text-align: center;
+  padding: 10px;
+}
+
+.title-footer {
+  padding: 20px;
+  /* Styles pour le côté du texte (en bas sur mobile) */
+}
+.title-footer img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 15px;
+  margin:10px;
+}
+.contact-list{
+  text-align: center;
+}
+.contact-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.contact-list ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 34px; /* Ajustez la taille de l'icône selon vos préférences */
+}
+
+.contact-list ul li a:hover {
+  color: #811538;
+}
+@media screen and (min-width: 768px) {
+  /* Média query pour les écrans de bureau */
+  .flex-container {
+    flex-direction: row; /* Revert à la direction par défaut pour les écrans de bureau */
+  }
+
+  .title-footer {
+    flex: 1;
+    /* Styles pour le côté du texte (à gauche sur bureau) */
+  }
+
+  .flex-footer {
+    flex: 1;
+  }
+}
+.form-container {
+  text-align: center;
+  padding: 10px;
+  
+}
+.bg-primary{
+    background: #811538 !important;
+    color: #fff;
+}
+.bg-secondary{
+    background: #2e010f !important;
+    color: #fff;
+}
+/*  */
