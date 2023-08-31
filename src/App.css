@@ -81,14 +81,7 @@ body {
   margin-bottom: 50px;
   margin-top: 50px;
 }
-.features img {
-  height: 17rem;
-  width: 20rem;
-  border-radius: 20px;
-}
-.features-titre h2 p {
-  font-size: 12px;
-}
+
 
 .comparer{
   margin-top: 25px;
@@ -203,5 +196,8 @@ body {
 .bg-secondary{
     background: #2e010f !important;
     color: #fff;
+}
+.hero {
+  background-color: #acacacc5;
 }
 /*  */

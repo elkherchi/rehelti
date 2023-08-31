@@ -7,7 +7,7 @@ const Accueil = () => {
   return (
     <div className="" id='acceil'>
        <div className='col'>
-        <section className="hero bg-light py-5 text-center">
+        <section className="hero  py-5 text-center">
           <Container> {/* Utilisez le composant Container ici */}
             <h1>Bienvenue sur Rehelti</h1>
             <p className="lead">
