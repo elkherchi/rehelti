@@ -130,21 +130,6 @@ body {
   text-align: center;
   padding: 20px;
 }
-.flex-footer {
-  text-align: center;
-  padding: 10px;
-}
-
-.title-footer {
-  padding: 20px;
-  /* Styles pour le côté du texte (en bas sur mobile) */
-}
-.title-footer img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 15px;
-  margin:10px;
-}
 .contact-list{
   text-align: center;
 }
@@ -199,5 +184,8 @@ body {
 }
 .hero {
   background-color: #acacacc5;
+}
+.footer {
+  text-align: center;
 }
 /*  */
