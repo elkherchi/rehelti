@@ -48,7 +48,7 @@ body {
 }
 
 .menu li.active {
-  background-color: #2e010f; 
+  background-color: #f1004c; 
   padding: 6px;
   border-radius: 10px;
 }
@@ -70,31 +70,63 @@ body {
 }
 .flex-container {
   display: flex;
+  text-align: center;
   flex-direction: column-reverse; 
 }
 
 .text-container {
-  padding: 20px;
-  /* Styles pour le côté du texte (en bas sur mobile) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: auto;
+  text-align: center;
 }
-.features {
-  margin-bottom: 50px;
-  margin-top: 50px;
+.aa{
+  background-image: url('/public/arriar-plant.png');
 }
-
-
+.feature {
+  background-color: #fbf8f8d4;
+  color: #000;
+}
+.feature h2 {
+  padding: 3px;
+  color: #811538;
+  font-size: 22px;
+}
+ .feature h4 {
+  color: #811538;
+ }
+ .feature i {
+  color: #640120;
+ }
+.flex-feature h4 {
+  font-size: 20px;
+}
+.flex-feature h2 {
+  color: #640120;
+}
+.flex-feature p {
+  font-size: 18px;
+  padding-left: 22px;
+}
+.flex-feature i {
+  color: #640120;
+}
 .comparer{
   margin-top: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 35px;
+  margin-right: 45px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
   background-color: #fff;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0,0, 0.2);
+  box-shadow: 0 0 5px #00000033;
 }
 .comparer p {
-  font-size: 25px;
+  padding-left: 40px;
+  padding: 12px;
+  font-size: 18px;
 }
 .comparer img {
   width: 3rem;
@@ -102,23 +134,35 @@ body {
   border-radius: 50%;
 }
 .comparer h2 {
-  margin: auto 5px;
+  /* margin: auto 5px; */
   font-size: 18px;
 }
-
+.showmessage {
+  background-color: #640120;
+  border-radius: 3px;
+  color: #fff;
+}
 .image{
   text-align: center;
-  background-color: #b8053eda;
+  background-color: #000000d2;
+  padding-bottom: 10px;
+
+  /* background-color: #fff;
+   */
 
 }
-.image p {
-  color: #fff;
+.text-title{
+ background-color: #f1004c;
+ color: #fff;
+ border-radius: 20px;
+ padding: 20px;
+ box-shadow: 0 0 10px rgba(0, 0,0, 0.2);
+}
+.text-title h3 {
   font-size: 20px;
 }
-.image button {
-  background-color: #fff;
-  padding-left: 20px;
-  padding-right: 20px;
+.text-title p {
+  font-size: 16px;
 }
 .title-form {
   padding: 10px;
@@ -152,7 +196,8 @@ body {
 }
 
 .contact-list ul li a:hover {
-  color: #811538;
+  color: #640120;
+  transition: #640120 0.1s;
 }
 @media screen and (min-width: 768px) {
   /* Média query pour les écrans de bureau */
@@ -175,17 +220,124 @@ body {
   
 }
 .bg-primary{
-    background: #811538 !important;
+    background: #640120 !important;
     color: #fff;
 }
 .bg-secondary{
-    background: #2e010f !important;
+    background: #86012b !important;
     color: #fff;
 }
 .hero {
   background-color: #acacacc5;
 }
+.hero h1 {
+  font-size: 30px;
+  padding: 4px;
+  color: #640120;
+}
+.hero button {
+  padding: 8px;
+}
 .footer {
   text-align: center;
 }
+.footer h2{
+  font-size: 20px;
+}
+.footer p {
+  font-size: 16px;
+}
+.footer img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0, 0,0, 0.2);
+}
+h4{
+  text-align: center;
+  font-size: 20px;
+}
+hr{
+  margin: 10px 0;
+  background-color: #ccc;
+  border: 0;
+  height: 1px;
+  width: 100%;
+}
+.kh{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.kh div{
+  display: flex;
+  flex-direction: column;
+  width: 49%;
+}
+label{
+  display: flex;
+  /* margin-bottom: 6px; */
+}
+input{
+  margin-bottom: 5px;
+  padding: 5px;
+  outline: 0;
+  border: 1px solid rgba(0, 0,0, 0.2);
+}
+input[type="submit"]{
+  margin-top: 15px;
+  background-color: #640120;
+  color: #fff;
+  border: 1px solid #640120;
+  border-radius: 6px;
+}
+.flex-feature {
+  padding: 12px;
+}
 /*  */
+.reseau i {
+  padding: 8px;
+  margin: 10px;
+  color: #fff;
+  background-color: #811538;
+  border-radius: 50%;
+}
+.google a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  background-color: #811538;
+  padding: 10px;
+  border-radius: 8px;
+}
+.brech{
+  background-color: #000000d2;
+}
+.card{
+  margin-left: 20rem;
+  margin-right: 20rem;
+  background-color: #ffffffed;
+}
+.card button {
+  width: 100%;
+  background-color: #811538;
+  border: none;
+}
+.resultat {
+  background-color: #f1004c;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  /* padding-top: 10px; */
+}
+.resultat h1{
+  font-size: 30px;
+}

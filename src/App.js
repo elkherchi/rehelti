@@ -7,7 +7,7 @@ import Footer from './component/Footer';
 import Presentation from './component/Presentation';
 import Accueil from './component/Acceuil';
 import Connexion from './component/connexion';
-
+import ResultatsTrajets from './component/tragets';
 function App() {
   return (
     <Router>
@@ -17,6 +17,7 @@ function App() {
           <Route path="/presentation" element={<Presentation />} />
           <Route path="/connexion" element={<Connexion />} />
           <Route path="/fonctionnalites" element={<Fonctionnalite />} />
+          <Route path="/tragets" Component={ResultatsTrajets} />
           <Route path="/" element={<Accueil />} />
         </Routes>
         <Footer />
