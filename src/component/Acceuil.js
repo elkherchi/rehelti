@@ -89,6 +89,7 @@ const Accueil = () => {
             </Col>
           </Row>
         </Container>
+        
       </section>
       <div className='acceuil-form'>
          <div className="flex-container">

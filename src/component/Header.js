@@ -8,7 +8,8 @@ const Header = () => {
   const menuItems = [
     { text: 'Accueil', to: '/' },
     { text: 'Présentation', to: '/presentation' },
-    { text: 'Fonctionnalités', to: '/fonctionnalites' },
+    { text: 'Testimonials', to: '/testimonialsPage' },
+    { text: 'Fonctionnalitees', to: '/fonctionnalites' },
     { text: 'Connexion', to: '/connexion' },
   ];
 

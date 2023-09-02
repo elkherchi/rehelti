@@ -341,3 +341,28 @@ input[type="submit"]{
 .resultat h1{
   font-size: 30px;
 }
+
+.citation-impactante {
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #ffff00;
+  border-left: 5px solid #ff9900;
+  padding: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+.title-testimonials h1 {
+  font-size: 22px;
+  color: #fff;
+}
