@@ -1,7 +1,7 @@
 //import le module important
 import React from "react";
 import { Row , Container , Col } from "react-bootstrap";
-const Connexion = () =>{
+const Contact = () =>{
     return (
        <div>
          <section className="text-center contact">
@@ -70,4 +70,4 @@ const Connexion = () =>{
     )
 }
 
-export default Connexion;
+export default Contact;

@@ -6,7 +6,7 @@ import TestimonialsPage from './component/TestimonialsPage';
 import Footer from './component/Footer';
 import Presentation from './component/Presentation';
 import Accueil from './component/Acceuil';
-import Connexion from './component/connexion';
+import Contact from './component/contact';
 import ResultatsTrajets from './component/tragets';
 import Fonctionnalités from './component/Fonctionnalitees';
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/presentation" element={<Presentation />} />
-          <Route path="/connexion" element={<Connexion />} />
+          <Route path="/conatct" element={<Contact />} />
           <Route path="/testimonialsPage" element={<TestimonialsPage />} />
           <Route path="/fonctionnalites" element={<Fonctionnalités />} />
           <Route path="/tragets" Component={ResultatsTrajets} />
