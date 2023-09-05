@@ -8,7 +8,8 @@ const Contact =  () =>{
     const [sujet, setsujet] = useState('');
     const [message, setmessage] = useState('');
     const [nom, setnom] = useState('');
-    
+    const [emailExists, setEmailExists] = useState(false);
+    const [emailpass , setemailpass] = useState("");
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validator.isEmail(email)) {
@@ -28,7 +29,16 @@ const Contact =  () =>{
           } else {
             alert('Erreur lors de l\'envoi de l\'e-mail');
           }      
-        };
+    };
+    const envoyernotifie = async (e) => {
+      e.preventDefault();
+      fetch(`'http://localhost:3001/notification?emailpass=${emailpass}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setEmailExists(data.success === "L'e-mail existe dans la base de données");
+      })
+      // .catch((error) => console.error('Erreur lors de la récupération des données', error));
+    };
     return (
        <div>
          <section className="text-center contact">
@@ -47,11 +57,22 @@ const Contact =  () =>{
                       nous detestons les spams autant que vous.
                 </p>
                 <Col className="contact-form">
+                <div >
+                <input
+                  type="email"
+                    placeholder="Entrer votre adress email"
+                    value={emailpass}
+                    onChange={(e) => {
+                      setemailpass(e.target.value);
+                      setEmailExists(false);
+                    }}
+                  />
+                  {emailExists && (
+                    <div className="alert alert-danger bg-danger" >L'e-mail existe déjà.</div>
+                  )}                
+                  </div>
                 <div>
-                    <input placeholder="Entrer votre adress email" />
-                </div>
-                <div>
-                    <button>S'INSCRIRE</button>
+                    <button onClick={envoyernotifie}>S'INSCRIRE</button>
                 </div>
                 </Col>
                 </Col>

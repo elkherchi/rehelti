@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Button, Row,Col} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 const Accueil = () => {
@@ -67,7 +68,8 @@ const Accueil = () => {
                 <i className="fas fa-search fa-3x mb-3"></i>
                 <h4>Recherche de Trajets</h4>
                 <p>Recherchez facilement des trajets disponibles pour votre destination.</p>
-                <Button variant="danger">En Suivi Plus <i className="fas fa-arrow-right"></i></Button>
+                
+                <Link to={'/fonctionnalites'}><Button variant="danger">En Suivi Plus <i className="fas fa-arrow-right"></i></Button></Link>
                 
               </div>
             </Col>
@@ -76,7 +78,7 @@ const Accueil = () => {
                 <i className="fas fa-car fa-3x mb-3"></i>
                 <h4>Publication d'Annonces</h4>
                 <p>Publiez vos trajets et partagez-les avec d'autres utilisateurs.</p>
-                <Button variant="danger">En Suivi Plus <i className="fas fa-arrow-right"></i></Button>
+                <Link to={'/fonctionnalites'}><Button variant="danger">En Suivi Plus <i className="fas fa-arrow-right"></i></Button></Link>
               </div>
             </Col>
             <Col md={4} className="mb-4">
@@ -84,7 +86,7 @@ const Accueil = () => {
                 <i className="fas fa-comments fa-3x mb-3"></i>
                 <h4>Messagerie Intégrée</h4>
                 <p>Communiquez facilement avec d'autres utilisateurs pour organiser vos covoiturages.</p>
-                <Button variant="danger">En Suivi Plus <i className="fas fa-arrow-right"></i></Button>
+                <Link to={'/fonctionnalites'}><Button variant="danger">En Suivi Plus <i className="fas fa-arrow-right"></i></Button></Link>
               </div>
             </Col>
           </Row>
