@@ -3,7 +3,7 @@ import { Container, Button, Row,Col} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 const Accueil = () => {
   const navigate = useNavigate();
-    const [villeDepart, setVilleDepart] = useState('');
+  const [villeDepart, setVilleDepart] = useState('');
   const [villeArrivee, setVilleArrivee] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();

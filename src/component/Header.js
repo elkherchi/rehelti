@@ -10,7 +10,7 @@ const Header = () => {
     { text: 'Présentation', to: '/presentation' },
     { text: 'Testimonials', to: '/testimonialsPage' },
     { text: 'Fonctionnalitees', to: '/fonctionnalites' },
-    { text: 'Contact', to: '/connexion' },
+    { text: 'Contact', to: '/contact' },
   ];
 
   const defaultActiveLink = menuItems.findIndex(item => item.to === location.pathname);

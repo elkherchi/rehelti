@@ -16,7 +16,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/presentation" element={<Presentation />} />
-          <Route path="/conatct" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/testimonialsPage" element={<TestimonialsPage />} />
           <Route path="/fonctionnalites" element={<Fonctionnalités />} />
           <Route path="/tragets" Component={ResultatsTrajets} />

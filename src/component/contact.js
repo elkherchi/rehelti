@@ -1,7 +1,34 @@
 //import le module important
-import React from "react";
+import React, {useState} from "react";
+import validator from "validator";
 import { Row , Container , Col } from "react-bootstrap";
-const Contact = () =>{
+const Contact =  () =>{
+
+    const [email, setemail] = useState('');
+    const [sujet, setsujet] = useState('');
+    const [message, setmessage] = useState('');
+    const [nom, setnom] = useState('');
+    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!validator.isEmail(email)) {
+            alert('Adresse e-mail invalide');
+            return;
+          }
+        const response = await fetch('http://localhost:3001/send-email', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ email, sujet, message , nom }),
+          });
+        
+          if (response.ok) {
+            alert('E-mail envoyé avec succès à l\'administrateur');
+          } else {
+            alert('Erreur lors de l\'envoi de l\'e-mail');
+          }      
+        };
     return (
        <div>
          <section className="text-center contact">
@@ -47,19 +74,19 @@ const Contact = () =>{
              <div className="contact-serveur-form">
                 <Col>
                 <div>
-                    <input placeholder="Votre Nom" />
+                    <input placeholder="Votre Nom" value={nom} onChange={(e) => setnom(e.target.value)} />
                 </div>
                 <div>
-                    <input placeholder="Votre adress email" />
+                    <input placeholder="Votre adress email" value={email} onChange={(e) => setemail(e.target.value)}/>
                 </div>
                 <div>
-                    <input placeholder="Sujet" />
+                    <input placeholder="Sujet" value={sujet} onChange={(e) => setsujet(e.target.value)} />
                 </div>
                 <div>
-                    <textarea placeholder="Message" rows={4}></textarea>
+                    <textarea placeholder="Message" value={message} onChange={(e) => setmessage(e.target.value)} rows={4}></textarea>
                 </div>
                 <div>
-                    <button>ENVOYER LE MESSAGE</button>
+                    <button onClick={handleSubmit}>ENVOYER LE MESSAGE</button>
                 </div>
                 </Col>
              </div>
