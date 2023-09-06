@@ -35,7 +35,7 @@ const Accueil = () => {
             </div>
             <div className="form-container">
               <form onSubmit={handleSubmit}>
-                <h4>Quel est votre Traget ?</h4>
+                <h4>Quel est votre Trajet ?</h4>
                 <hr></hr>
                 <label>Ville depart :</label>
                 <input type="text" value={villeDepart} onChange={(e) => setVilleDepart(e.target.value)} required></input>
