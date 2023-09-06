@@ -436,3 +436,11 @@ input[type="submit"]{
   border-radius: 10px;
   background-color: #86012b;
 }
+.recherchevide p{
+  background-color: #fff;
+  width: 400px;
+  border-radius: 10px;
+  height: 40px;
+  padding-top: 6px;
+  color: #811538;
+}

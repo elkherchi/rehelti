@@ -31,25 +31,29 @@ const ResultatsTrajets = () => {
             </div>
             )}
             </Row>
-        <Col>
-          {resultats.map((trajet) => (
-            <Col key={trajet.id} className='p-2 recher'>
-              <Card className='card'>
-                <Card.Body>
-                  <Card.Title>{trajet.ville_depart} - {trajet.ville_Arrive}</Card.Title>
-                  <Card.Text>
-                    <Col>
-                     <p>Date depart : {trajet.date_depart}</p>
-                     <p>Nombre de Place disponible : {trajet.nombre_place}</p>
-                    </Col>
-                  </Card.Text>
-                  <Button  onClick={handleSubmit}>Réserver</Button>
-                 
-                </Card.Body>
-              </Card>
-            </Col>
-          ))}
-          
+            <Col>
+          {resultats.length === 0 ? (
+            <Row className='recherchevide p-5 d-flex justify-content-center'>
+              <p>Ce trajet n'est pas encore disponible</p>
+            </Row>
+          ) : (
+            resultats.map((trajet) => (
+              <Col key={trajet.id} className='p-2 recher'>
+                <Card className='card'>
+                  <Card.Body>
+                    <Card.Title>{trajet.ville_depart} - {trajet.ville_Arrive}</Card.Title>
+                    <Card.Text>
+                      <Col>
+                        <p>Date de départ : {trajet.date_depart}</p>
+                        <p>Nombre de places disponibles : {trajet.nombre_place}</p>
+                      </Col>
+                    </Card.Text>
+                    <Button onClick={handleSubmit}>Réserver</Button>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))
+          )}
         </Col>
         
         </Container>
