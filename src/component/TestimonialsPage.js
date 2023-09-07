@@ -40,14 +40,22 @@ const TestimonialsPage = () => {
       </div>
       <Container className="text-center">
         <Row className="justify-content-center m-5">
-          {filterTestimonials().map((testimonial) => (
+          {
+            testimonials.length === 0 ? (
+              <Row className='recherchevide p-5 d-flex justify-content-center'>
+                <p>Ne pas aucore existe des temoignages</p>
+              </Row>
+            ) :(
+          filterTestimonials().map((testimonial) => (
             <Card key={testimonial.id} className="mb-4 animate__animated animate__fadeInUp">
               <Card.Body>
                 <Card.Text className='citation-impactante'>{testimonial.texte}</Card.Text>
                 <Card.Title>{testimonial.nom}</Card.Title>
               </Card.Body>
             </Card>
-          ))}
+          )))
+        
+      }
         </Row>
       </Container>
     </section>

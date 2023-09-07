@@ -505,3 +505,28 @@ input[type="submit"]{
   font-size: 17px;
   margin: 10px 0;
 }
+.mx-auto{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  padding: 6px;
+}
+.card-av{
+  width: 200px;
+  margin-top: 10px;
+}
+.how-it {
+  background-color: #000000d2;
+}
+.how-it {
+  text-align: center;
+  color: #fff;
+  padding: 10px;
+}
+.header-card {
+  color: #811538;
+}
+.title-card {
+  font-weight: bold;
+  color: #640120;
+}

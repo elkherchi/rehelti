@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Button, Row,Col} from 'react-bootstrap';
+import { Container, Button, Row,Col,Card} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 const Accueil = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const Accueil = () => {
   
   return (
     <div className="" id='acceil'>
-       <div className='col'>
+      <div className='col'>
         <section className="hero  py-1 text-center">
           <Container> 
             <h1>Bienvenue sur Rehelti</h1>
@@ -145,6 +145,36 @@ const Accueil = () => {
           </Row>
         </div>
       </div>
+      <section className="how-it">
+        <Container>
+          <h2>Découvrez vos avantages personnalisés</h2>
+          <p>En covoitural,nous vous permettons de réduire les émissions polluantes,<br/>réaliser plus d'économies,gagner du temps,rencotrer de nouvelles personnes! </p>
+          <div className="step-container">
+            <div className="step">
+              <Card className='card-av'>
+                <Card.Header className='header-card'>Passager</Card.Header>
+                <Card.Img variant="top" src="./011.png" alt="Image" className="mx-auto" />
+                <Card.Body>
+                  <Card.Title className='title-card'>Le confort de la voiture au prix d'un ticket de bus</Card.Title>
+                  <Card.Subtitle className="mb-3 text-muted">+ Vos 10 permiers trajets sont offerts!</Card.Subtitle>
+                  
+                </Card.Body>
+              </Card>
+            </div>
+            <div className="step">
+              <Card className='card-av'>
+                <Card.Header className='header-card'>Conducteur</Card.Header>
+                <Card.Img variant="top" src="./011.png" alt="Image" className="mx-auto" />
+                <Card.Body>
+                  <Card.Title className='title-card'>Le confort de la voiture au prix d'un ticket de bus</Card.Title>
+                  <Card.Subtitle className="mb-3 text-muted" > <b>+ 100 millions de prime covoiturage</b>selon elegibilite </Card.Subtitle>
+                  
+                </Card.Body>
+              </Card>
+            </div>
+          </div>
+        </Container>
+      </section>
       
     </div>
   );
