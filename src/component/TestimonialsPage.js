@@ -20,7 +20,7 @@ const TestimonialsPage = () => {
   };
 
   return (
-    <section className=''>
+    <section className='témoignages'>
       <div className="d-flex justify-content-between align-items-center p-2 mb-2 bg-danger title-testimonials">
         <div>
           <h1>Témoignages</h1>
@@ -39,7 +39,7 @@ const TestimonialsPage = () => {
         </div>
       </div>
       <Container className="text-center">
-        <Row className="justify-content-center m-2">
+        <Row className="justify-content-center m-5">
           {filterTestimonials().map((testimonial) => (
             <Card key={testimonial.id} className="mb-4 animate__animated animate__fadeInUp">
               <Card.Body>

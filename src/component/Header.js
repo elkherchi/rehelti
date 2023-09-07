@@ -22,11 +22,9 @@ const Header = () => {
 
   return (
     <header className="en-tete bg-primary">
-      <div id="header-background" className="header-content">
-        <div className="logo">
-          <img src="/011.png" alt="Logo" />
-        </div>
         <nav className="navbar">
+          <img src="/011.png" alt="Logo" className="logo" />
+
           <ul className="menu">
             {menuItems.map((item, index) => (
               <li
@@ -39,7 +37,6 @@ const Header = () => {
             ))}
           </ul>
         </nav>
-      </div>
     </header>
   );
 }

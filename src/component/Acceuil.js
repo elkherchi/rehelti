@@ -10,6 +10,7 @@ const Accueil = () => {
     e.preventDefault();
     navigate(`/tragets?villeDepart=${villeDepart}&villeArrivee=${villeArrivee}`);
   };
+  
   return (
     <div className="" id='acceil'>
        <div className='col'>
@@ -93,16 +94,34 @@ const Accueil = () => {
         </Container>
         
       </section>
-      <div className='acceuil-form'>
-         <div className="flex-container">
-            <div className="text-container">
-            <div className='title-form'>
+      <section className="how-it-works">
+        <Container>
+          <h2 className="text-center m-4">Comment Covoiturer avec Rehelti</h2>
+          <div className="step-container">
+            <div className="step">
+              <div className="step-circle">01</div>
+              <div className="step-content">
+                <h2>Télécharger Rehelti</h2>
+                <p>sur ton téléphone</p>
+              </div>
             </div>
+            <div className="step">
+              <div className="step-circle">02</div>
+              <div className="step-content">
+                <h2>Crée ton compte</h2>
+                <p>en renseignant tes formulaires</p>
+              </div>
             </div>
-            <div className="form-container">
+            <div className="step">
+              <div className="step-circle">03</div>
+              <div className="step-content">
+                <h2>C'est parti !</h2>
+                <p>Covoiture avec qui tu veux dans l'application</p>
+              </div>
             </div>
           </div>
-      </div>
+        </Container>
+      </section>
       <div className='comparer'>
         <p>Venez comparer et combiner votre trajet pour des billets pas chers ! Vos compagnies préférées nous font confiance. Rehelti vous propose leurs meilleures offres :</p>
         <div className='row'>
@@ -126,6 +145,7 @@ const Accueil = () => {
           </Row>
         </div>
       </div>
+      
     </div>
   );
 }

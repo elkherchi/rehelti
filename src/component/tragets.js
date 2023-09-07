@@ -25,12 +25,13 @@ const ResultatsTrajets = () => {
         <Container>
             <Row className='resultat p-2'>
              <h1>Résultats de la recherche</h1>
-             {showMessage && (
+             
+            </Row>
+            {showMessage && (
             <div className='showmessage p-2'>
                 <span>Téléchargez votre application et créez un compte !</span>
             </div>
             )}
-            </Row>
             <Col>
           {resultats.length === 0 ? (
             <Row className='recherchevide p-5 d-flex justify-content-center'>
